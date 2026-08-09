@@ -1,7 +1,7 @@
 {
   "name": "storystak-skills",
   "description": "Conversion, design, and Vault-aware skills \u2014 CRO auditing, anti-slop design discipline, and skills for working with a Storystak Vault connector.",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": {
     "name": "Zach Worley",
     "url": "https://storystak.com"

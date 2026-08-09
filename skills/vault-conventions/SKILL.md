@@ -2,7 +2,7 @@
 name: vault-conventions
 description: How to work with a Vault — a read-only MCP connector that serves a company's canonical brand, copy, stats, and reference content. Read this FIRST in any session where a Vault connector is attached and the task touches brand, voice, copy, stats, services, positioning, reviews, or anything a client would publish. Also use when the user mentions "the Vault," "our brand guide," "canonical stats," "what does the Vault say," "check the Vault," when Vault tools seem to exist but aren't being called, when a Vault call fails or asks for approval, or when you are unsure which Vault tool answers a question. Covers tool discovery, corporate vs agency vault shapes, the non-negotiable sourcing rules, and the connector-permission trap that silently disables the whole system. Every other Vault skill defers to this one.
 metadata:
-  version: 1.0.0
+  version: 1.1.0
 ---
 
 # Vault Conventions
@@ -44,6 +44,7 @@ Scan the available tools for these suffixes:
 - **Name the client on every single content call.** The argument is not optional and there is no sensible default.
 - **Never blend.** One client's stats, voice, reviews, or brand must never inform another client's deliverable. Not as inspiration, not as an example, not "for reference."
 - Scoped results are usually stamped with a banner naming whose context they carry. Keep that attribution attached as the content moves downstream.
+- **The roster reflects the caller, not the Vault.** Some scopes are restricted to specific people, so a client the user expects may simply not be in *their* roster. That is access control working, not a missing client — say so rather than treating it as a bug or hunting for the content another way.
 
 **Corporate Vault** — no `list_clients`, no `client` argument. One connector, one company. Simpler: everything in it belongs to the same brand.
 

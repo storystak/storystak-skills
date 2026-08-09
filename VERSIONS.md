@@ -3,7 +3,7 @@
 Current version of every skill in this repo. Machine-readable on purpose — an
 agent can compare these against its local copies to check for updates.
 
-Plugin version: **0.1.1**
+Plugin version: **0.1.2**
 
 | Skill | Version | Last updated |
 |---|---|---|
@@ -11,7 +11,7 @@ Plugin version: **0.1.1**
 | full-output-enforcement | 1.0.0 | 2026-08-09 |
 | storystak-anti-slop-design | 1.0.0 | 2026-08-09 |
 | storystak-cro | 1.0.0 | 2026-08-09 |
-| vault-conventions | 1.0.0 | 2026-08-09 |
+| vault-conventions | 1.1.0 | 2026-08-09 |
 | vault-onboarding | 1.0.0 | 2026-08-09 |
 | vault-update-request | 1.0.0 | 2026-08-09 |
 

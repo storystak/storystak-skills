@@ -1,0 +1,17 @@
+# Consumers of this repo's skills/ — one per line, gitignored copy at `.consumers`.
+#
+#   <path relative to this repo>[|flags]
+#
+# Paths are relative on purpose: an absolute path would carry a home directory
+# into a file that is easy to paste somewhere public.
+#
+# Flags:
+#   deploys   this repo redeploys production on push, so the script commits
+#             but never pushes it — you push that one deliberately
+#
+# A consumer with .claude-plugin/plugin.json gets its version bumped in the
+# same commit as the sync. One without (a vault MCP server) just gets skills/.
+#
+# Example:
+# ../clients/acme/acme-ai
+# ../clients/acme/acme-vault-mcp|deploys

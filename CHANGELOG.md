@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 — 2026-08-09
+
+`vault-conventions` 1.1.0 — on an agency vault, the roster reflects what the
+*caller* may address, not what the Vault holds. A client missing from someone's
+roster is access control working, not a missing client. Without this the model
+treats a restricted scope as a bug and goes looking for the content another way.
+
+Also adds `sync-consumers.sh`, which pushes skills to every vendored copy and
+bumps their versions in the same commit.
+
 ## 0.1.1 — 2026-08-09
 
 Corrected the install instructions. Plugins **do** work in claude.ai, in both
