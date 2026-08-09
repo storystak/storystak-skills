@@ -1,0 +1,16 @@
+# Private denylist — copy to `.private-denylist` (gitignored) and fill in.
+#
+# One regex alternation per line. Blank lines and # comments ignored.
+# These names must never appear in a public skill, and must never appear
+# in this repo either — which is why the real file is not committed.
+#
+# Client and employer names, including former ones:
+# Acme|AcmeCorp
+#
+# Real people — founders, staff, customers quoted in examples. This is the
+# category that actually gets through, because a person's name rarely
+# co-occurs with the company's.
+# Jane ?Doe|Doe
+#
+# Vendors and internal tooling that reveal the stack:
+# SomeHost|SomeCRM

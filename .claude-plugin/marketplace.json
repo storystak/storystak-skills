@@ -1,0 +1,18 @@
+{
+  "name": "storystak",
+  "owner": {
+    "name": "Zach Worley",
+    "url": "https://storystak.com"
+  },
+  "metadata": {
+    "description": "Storystak's skill kit — conversion, design, and Vault-aware skills.",
+    "repository": "https://github.com/storystak/storystak-skills"
+  },
+  "plugins": [
+    {
+      "name": "storystak-skills",
+      "source": "./",
+      "description": "Conversion, design, and Vault-aware skills for marketers."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate-skills:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate skills
+        # The client and personal name patterns live in a repo secret rather
+        # than in the tree: a public file listing the names to block would
+        # publish the roster it exists to protect. Without the secret the
+        # generic checks still run and the script warns.
+        env:
+          PRIVATE_DENYLIST: ${{ secrets.PRIVATE_DENYLIST }}
+        run: ./validate-skills.sh
+
+      - name: Validate plugin manifests are well-formed JSON
+        run: |
+          for f in .claude-plugin/plugin.json .claude-plugin/marketplace.json; do
+            python3 -c "import json,sys; json.load(open('$f'))" && echo "ok   $f"
+          done
+
+      - name: Plugin version must match the marketplace's declared version
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          plugin = json.load(open('.claude-plugin/plugin.json'))
+          market = json.load(open('.claude-plugin/marketplace.json'))
+          # plugin.json is the authority; a version in the marketplace entry is
+          # silently ignored by Claude Code, so having one is a latent trap.
+          for entry in market['plugins']:
+              if 'version' in entry:
+                  sys.exit(
+                      f"marketplace entry {entry['name']!r} declares a version. "
+                      "Remove it — plugin.json always wins and the duplicate drifts."
+                  )
+          print(f"ok   plugin version {plugin['version']}, no duplicate in marketplace")
+          PY
