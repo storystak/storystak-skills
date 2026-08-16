@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # Validate every skill in skills/ before it ships.
 #
-# Three classes of check:
-#   1. Structure   — SKILL.md exists, has frontmatter, name matches its directory
-#   2. Privacy     — no client, personal, or internal reference reaches a public repo
-#   3. References  — no skill points at a skill that isn't in this repo
+# Four classes of check:
+#   1. Structure    — SKILL.md exists, has frontmatter, name matches its directory
+#   2. Privacy      — no client, personal, or internal reference reaches a public repo
+#   3. Containment  — no INTERNAL-marked skill or private-doctrine reference ships
+#   4. References   — no skill points at a skill that isn't in this repo
 #
 # Exit 1 on any failure. Wired to CI on every PR.
 
@@ -93,6 +94,28 @@ if [ $privacy_clean -eq 1 ]; then
     printf '       names are NOT being checked. See .private-denylist.example\n'
   fi
 fi
+
+echo "==> Internal containment"
+# Some skills are internal procedure and must never reach a client surface.
+# The convention marking them is the all-caps word INTERNAL in the frontmatter
+# description ("INTERNAL — never ship..."), and internal skills reference
+# private doctrine by path. A marking enforced by nothing is a label, not a
+# control (assessed 2026-08-15; the 2026-08-09 vendored-skill leak is the
+# precedent) — this check is the enforcement.
+#
+# Case-SENSITIVE on purpose: prose "Internal linking" is legitimate; the
+# all-caps marking and `doctrine/` paths are not. The private OS-repo names
+# this check also needs to block are carried by the private denylist above,
+# NOT written here — this file is public, and naming the repos it protects
+# would publish the reference it exists to prevent.
+containment_clean=1
+if hits=$(grep -rnE '\bINTERNAL\b|\bdoctrine/' skills/ 2>/dev/null); then
+  err "INTERNAL-marked content or doctrine reference(s) found — this content"
+  err "is internal procedure and must not ship to any consumer:"
+  printf '%s\n' "$hits" | sed 's/^/       /'
+  containment_clean=0
+fi
+[ $containment_clean -eq 1 ] && ok "no INTERNAL-marked skills or doctrine references"
 
 echo "==> Cross-references"
 # Every `skill-name` in backticks that looks like one of ours must exist.
