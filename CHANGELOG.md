@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.2.0 — 2026-08-16
+
+New skill: `team-onboarding` 1.0.0 — walks a new team member (hire or
+contractor) through their company's own onboarding, phase by phase, using the
+Vault's onboarding playbook and SOP library. Deliberately generic: the skill
+carries the procedure for *finding and sequencing* a company's documented
+process, never the process itself — a Vault with no onboarding content gets
+"your Vault doesn't carry this yet", not an invented checklist. Pairs with
+`vault-onboarding` (new to the Vault) the way a first day pairs with a first
+session.
+
 ## 0.1.2 — 2026-08-09
 
 `vault-conventions` 1.1.0 — on an agency vault, the roster reflects what the
