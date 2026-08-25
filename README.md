@@ -1,6 +1,6 @@
 # Storystak Skills
 
-Skills for marketers working with Claude — conversion optimization, design discipline that avoids the generic AI look, and a set for working with a **Vault**: a read-only connector that serves a company's canonical brand, copy, and stats.
+Skills for marketers working with Claude — conversion optimization, design discipline that avoids the generic AI look, and a set for working with a **Stak**: a read-only connector that serves a company's canonical brand, copy, and stats.
 
 Built by [Storystak](https://storystak.com). MIT licensed, free to use and fork.
 
@@ -13,12 +13,12 @@ Built by [Storystak](https://storystak.com). MIT licensed, free to use and fork.
 | **storystak-cro** | Audits and rewrites landing pages, sites, funnels, and forms. Loads a per-client context (or derives one from a URL) and applies Miller, Brunson, Hormozi, Kennedy, Schwartz, and Cialdini frameworks. Ships with 13 reference files — an experiments library, industry pattern library, awareness levels, form optimization, page templates. |
 | **storystak-anti-slop-design** | Keeps UI from converging on the default AI aesthetic — lavender-purple, Inter, centered hero with a badge, glassmorphism, nested cards. Pre-generation constraints plus a pre-ship audit. |
 | **full-output-enforcement** | Forces complete, unabridged output. No placeholders, no `// rest of code here`. |
-| **vault-conventions** | How to work with a Vault: tool discovery, corporate vs agency shapes, the sourcing rules, and the connector setting that silently disables everything. The other Vault skills defer to this one. |
+| **stak-conventions** | How to work with a Stak: tool discovery, corporate vs agency shapes, the sourcing rules, and the connector setting that silently disables everything. The other Stak skills defer to this one. |
 | **copy-check** | Pre-ship gate. Every number traced to a canonical source, voice matched to the brand guide, quotes verified. Returns findings and a PASS/FAIL — never rewritten copy. |
-| **vault-update-request** | Files a correction a reviewer can act on without a follow-up conversation. Covers the edit vs new-file decision. |
-| **vault-onboarding** | Non-technical first session with a Vault: what it holds, which tool answers which question, and the setup checklist. |
+| **stak-update-request** | Files a correction a reviewer can act on without a follow-up conversation. Covers the edit vs new-file decision. |
+| **stak-onboarding** | Non-technical first session with a Stak: what it holds, which tool answers which question, and the setup checklist. |
 
-The first three work anywhere. The four Vault skills need a Vault connector attached — without one they say so and fall back to what they can do unaided.
+The first three work anywhere. The four Stak skills need a Stak connector attached — without one they say so and fall back to what they can do unaided.
 
 ---
 
@@ -57,13 +57,13 @@ On claude.ai, **Sync automatically** is on by default — new versions arrive on
 
 ---
 
-## What a Vault is
+## What a Stak is
 
-A Vault is a remote MCP server holding one company's canonical content — brand and voice, approved copy, verified stats with sources and dates, services, reviews. It's read-only: Claude reads from it but never writes, and corrections go through a human review queue.
+A Stak is a remote MCP server holding one company's canonical content — brand and voice, approved copy, verified stats with sources and dates, services, reviews. It's read-only: Claude reads from it but never writes, and corrections go through a human review queue.
 
 The point is traceability. A number in a deliverable resolves to a specific file with a date on it, rather than to a model's memory of a website it saw in training.
 
-The Vault skills here are written against the general shape rather than any one server, so they work whether tools are unprefixed (`search_vault`) or namespaced (`acme_search_vault`), and whether the Vault serves one company or a roster of clients.
+The Stak skills here are written against the general shape rather than any one server, so they work whether tools are unprefixed (`search_stak`) or namespaced (`acme_search_stak`), and whether the Stak serves one company or a roster of clients.
 
 ---
 

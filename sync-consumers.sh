@@ -2,7 +2,7 @@
 # Push skills/ from this repo out to every consumer, and bump their versions.
 #
 # This repo is canonical. Consumers vendor a copy: client plugin repos ship it
-# to clients, vault MCP repos serve it over list_skills/get_skill. Each copy is
+# to clients, stak MCP repos serve it over list_skills/get_skill. Each copy is
 # a drift surface, and the version string is the ONLY update signal an
 # installed client receives — a consumer that gets new skills without a version
 # bump silently keeps serving the old ones.

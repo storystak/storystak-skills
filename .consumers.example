@@ -10,8 +10,8 @@
 #             but never pushes it — you push that one deliberately
 #
 # A consumer with .claude-plugin/plugin.json gets its version bumped in the
-# same commit as the sync. One without (a vault MCP server) just gets skills/.
+# same commit as the sync. One without (a stak MCP server) just gets skills/.
 #
 # Example:
 # ../clients/acme/acme-ai
-# ../clients/acme/acme-vault-mcp|deploys
+# ../clients/acme/acme-stak-mcp|deploys

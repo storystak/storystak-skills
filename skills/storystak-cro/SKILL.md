@@ -363,5 +363,5 @@ The funnel doesn't end at form submission. Thank-you pages affect call show rate
 - **ad-creative** — For ad copy generation and iteration (often the upstream of landing pages)
 - **ab-test-setup** — For designing and implementing A/B tests
 - **analytics-tracking** — For setting up conversion tracking
-- **vault-conventions** — If a Vault connector is attached, read that first: it governs where stats, brand voice, and approved proof points come from
+- **stak-conventions** — If a Stak connector is attached, read that first: it governs where stats, brand voice, and approved proof points come from
 - **copy-check** — Run before anything produced here ships to a client

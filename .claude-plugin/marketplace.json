@@ -5,14 +5,14 @@
     "url": "https://storystak.com"
   },
   "metadata": {
-    "description": "Storystak's skill kit — conversion, design, and Vault-aware skills.",
+    "description": "Storystak's skill kit — conversion, design, and Stak-aware skills.",
     "repository": "https://github.com/storystak/storystak-skills"
   },
   "plugins": [
     {
       "name": "storystak-skills",
       "source": "./",
-      "description": "Conversion, design, and Vault-aware skills for marketers."
+      "description": "Conversion, design, and Stak-aware skills for marketers."
     }
   ]
 }

@@ -28,9 +28,9 @@ If you hit a false positive, tighten the pattern rather than dropping the term. 
 
 **Version independently.** Each skill carries `metadata.version` in frontmatter. Bump it when you change the skill and update `VERSIONS.md`.
 
-**Assume no Vault.** The Vault skills must degrade gracefully when no connector is attached — say so once and do what's possible unaided. Strangers install this plugin.
+**Assume no Stak.** The Stak skills must degrade gracefully when no connector is attached — say so once and do what's possible unaided. Strangers install this plugin.
 
-**Never hardcode a Vault tool name.** Match on the suffix. Tools are unprefixed on some servers and namespaced on others.
+**Never hardcode a Stak tool name.** Match on the suffix. Tools are unprefixed on some servers and namespaced on others.
 
 ## Releasing
 

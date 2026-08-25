@@ -12,9 +12,9 @@ Plugin version: **0.2.0**
 | storystak-anti-slop-design | 1.0.0 | 2026-08-09 |
 | storystak-cro | 1.0.0 | 2026-08-09 |
 | team-onboarding | 1.0.0 | 2026-08-16 |
-| vault-conventions | 1.1.0 | 2026-08-09 |
-| vault-onboarding | 1.0.0 | 2026-08-09 |
-| vault-update-request | 1.0.0 | 2026-08-09 |
+| stak-conventions | 1.1.0 | 2026-08-09 |
+| stak-onboarding | 1.0.0 | 2026-08-09 |
+| stak-update-request | 1.0.0 | 2026-08-09 |
 
 Skill versions move independently of the plugin version. The plugin version in
 `.claude-plugin/plugin.json` is the **only** update signal installed users

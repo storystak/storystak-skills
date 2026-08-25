@@ -1,6 +1,6 @@
 ---
 name: copy-check
-description: Pre-ship verification gate for anything client-facing. Checks a draft against the Vault so every number traces to a canonical source, the voice matches the brand guide, quotes are real and approved, and no claim rests on a model's memory. Use BEFORE any deliverable goes out — landing page copy, ad creative, email, social post, one-pager, deck, proposal, press copy, web page. Also use when the user says "check this," "is this ready to send," "does this match our brand," "verify this copy," "fact-check this," "can we say this," "review before publish," or "sanity check this draft." Returns findings and a PASS or FAIL verdict — never rewritten copy. Requires a Vault connector; degrades to a structural review without one.
+description: Pre-ship verification gate for anything client-facing. Checks a draft against the Stak so every number traces to a canonical source, the voice matches the brand guide, quotes are real and approved, and no claim rests on a model's memory. Use BEFORE any deliverable goes out — landing page copy, ad creative, email, social post, one-pager, deck, proposal, press copy, web page. Also use when the user says "check this," "is this ready to send," "does this match our brand," "verify this copy," "fact-check this," "can we say this," "review before publish," or "sanity check this draft." Returns findings and a PASS or FAIL verdict — never rewritten copy. Requires a Stak connector; degrades to a structural review without one.
 metadata:
   version: 1.0.0
 ---
@@ -11,7 +11,7 @@ The gate between a draft and a client seeing it. Its only job is to find things 
 
 **This skill returns findings and a verdict. It does not rewrite the copy.** That separation is the point: a reviewer that silently fixes what it finds teaches nobody, hides the error rate, and produces a draft nobody has actually verified. Report what's wrong and let the author decide.
 
-Read `vault-conventions` first if you haven't — this skill assumes you know how to find the Vault's tools and whether you're in a corporate or agency Vault.
+Read `stak-conventions` first if you haven't — this skill assumes you know how to find the Stak's tools and whether you're in a corporate or agency Stak.
 
 ---
 
@@ -51,15 +51,15 @@ Every customer quote must come from `select_reviews` / `select_testimonials` whe
 
 Anything asserted as fact that isn't a number: guarantees, credentials, certifications, awards, service coverage, timelines, comparisons to competitors, "the only," "the first," "the largest."
 
-Each one needs a Vault source or an explicit note that the client confirmed it. Comparative and superlative claims are the ones that draw complaints.
+Each one needs a Stak source or an explicit note that the client confirmed it. Comparative and superlative claims are the ones that draw complaints.
 
 ### 5. Compliance, where it applies
 
-If `check_copy_compliance` exists on this Vault, run it — its presence means this client operates somewhere with rules, and your general judgment is not a substitute.
+If `check_copy_compliance` exists on this Stak, run it — its presence means this client operates somewhere with rules, and your general judgment is not a substitute.
 
-Absent that tool, if the Vault carries compliance or advertising-claim content, read it and check against it. Regulated categories — finance, medical, legal, debt, insurance — have restricted vocabularies where the specific words matter.
+Absent that tool, if the Stak carries compliance or advertising-claim content, read it and check against it. Regulated categories — finance, medical, legal, debt, insurance — have restricted vocabularies where the specific words matter.
 
-### 6. Cross-client contamination (agency Vaults only)
+### 6. Cross-client contamination (agency Staks only)
 
 Confirm every fact, stat, quote, and voice choice traces to **the client this deliverable is for**. Content borrowed from a sibling client on the same roster is a serious finding regardless of how well it reads.
 
@@ -103,12 +103,12 @@ A PASS with flags is a normal, good outcome. A PASS with nothing listed under "c
 
 ---
 
-## Without a Vault
+## Without a Stak
 
-Say once that no Vault is attached and that sourcing cannot be verified. Then do the part you can: list every number and factual claim in the draft as **unverified**, and review voice and structure on their own merits. A list of things the author needs to confirm is genuinely useful. A PASS is not available.
+Say once that no Stak is attached and that sourcing cannot be verified. Then do the part you can: list every number and factual claim in the draft as **unverified**, and review voice and structure on their own merits. A list of things the author needs to confirm is genuinely useful. A PASS is not available.
 
 ## Related skills
 
-- **vault-conventions** — tool discovery, corporate vs agency, the sourcing rules this skill enforces
-- **vault-update-request** — for the stale stats and errors this check surfaces
+- **stak-conventions** — tool discovery, corporate vs agency, the sourcing rules this skill enforces
+- **stak-update-request** — for the stale stats and errors this check surfaces
 - **storystak-cro** — produces the copy this skill gates

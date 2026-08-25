@@ -120,7 +120,7 @@ fi
 echo "==> Cross-references"
 # Every `skill-name` in backticks that looks like one of ours must exist.
 known=$(for d in "${dirs[@]}"; do basename "$d"; done)
-dangling=$(grep -rhoE '`(vault|copy|storystak|full)-[a-z-]+`' skills/ 2>/dev/null \
+dangling=$(grep -rhoE '`(stak|copy|storystak|full)-[a-z-]+`' skills/ 2>/dev/null \
   | tr -d '`' | sort -u \
   | while read -r ref; do grep -qx "$ref" <<<"$known" || echo "$ref"; done)
 if [ -n "$dangling" ]; then
