@@ -1,7 +1,7 @@
 {
   "name": "storystak-skills",
-  "description": "Conversion, design, and Stak-aware skills \u2014 CRO auditing, anti-slop design discipline, and skills for working with a Storystak Stak connector.",
-  "version": "0.1.2",
+  "description": "Conversion, design, and Stak-aware skills — CRO auditing, anti-slop design discipline, and skills for working with a Storystak Stak connector.",
+  "version": "0.3.0",
   "author": {
     "name": "Zach Worley",
     "url": "https://storystak.com"

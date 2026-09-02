@@ -117,6 +117,34 @@ if hits=$(grep -rnE '\bINTERNAL\b|\bdoctrine/' skills/ 2>/dev/null); then
 fi
 [ $containment_clean -eq 1 ] && ok "no INTERNAL-marked skills or doctrine references"
 
+echo "==> Version parity"
+# The plugin version is the ONLY update signal an installed copy receives.
+# It went unbumped through two releases (0.2.0 and the 2026-08-25 rename), so
+# every plugin installed from this repo kept serving Vault-named skills for a
+# week. Three places state a version; they must agree, or the release is a
+# label on nothing.
+pj_version=$(python3 -c 'import json;print(json.load(open(".claude-plugin/plugin.json"))["version"])' 2>/dev/null)
+vm_version=$(grep -oE '^Plugin version: \*\*[0-9.]+\*\*' VERSIONS.md | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+[ -n "$pj_version" ] || err "plugin.json has no readable version"
+[ -n "$vm_version" ] || err "VERSIONS.md has no 'Plugin version: **x.y.z**' line"
+if [ -n "$pj_version" ] && [ -n "$vm_version" ]; then
+  [ "$pj_version" = "$vm_version" ] && ok "plugin.json $pj_version == VERSIONS.md $vm_version" \
+    || err "plugin.json says $pj_version but VERSIONS.md says $vm_version — bump both, or nobody gets the release"
+fi
+grep -q "^## $pj_version " CHANGELOG.md \
+  && ok "CHANGELOG.md has a $pj_version entry" \
+  || err "CHANGELOG.md has no '## $pj_version' entry — a version with no changelog is a number, not a release"
+parity_clean=1
+for d in "${dirs[@]}"; do
+  slug=$(basename "$d")
+  fm=$(awk '/^---$/{n++; next} n==1 && /^[[:space:]]*version:/{sub(/^[[:space:]]*version:[[:space:]]*/,""); print; exit}' "$d/SKILL.md")
+  tbl=$(grep -E "^\| $slug \|" VERSIONS.md | awk -F'|' '{gsub(/ /,"",$3); print $3}')
+  if [ -z "$tbl" ]; then err "$slug: not in the VERSIONS.md table"; parity_clean=0
+  elif [ "$fm" != "$tbl" ]; then err "$slug: SKILL.md says $fm, VERSIONS.md says $tbl"; parity_clean=0
+  fi
+done
+[ $parity_clean -eq 1 ] && ok "every skill's frontmatter version matches the VERSIONS.md table"
+
 echo "==> Cross-references"
 # Every `skill-name` in backticks that looks like one of ours must exist.
 known=$(for d in "${dirs[@]}"; do basename "$d"; done)

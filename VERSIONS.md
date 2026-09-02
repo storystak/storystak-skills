@@ -3,7 +3,7 @@
 Current version of every skill in this repo. Machine-readable on purpose — an
 agent can compare these against its local copies to check for updates.
 
-Plugin version: **0.2.0**
+Plugin version: **0.3.0**
 
 | Skill | Version | Last updated |
 |---|---|---|
@@ -14,7 +14,7 @@ Plugin version: **0.2.0**
 | team-onboarding | 1.0.0 | 2026-08-16 |
 | stak-conventions | 1.1.0 | 2026-08-09 |
 | stak-onboarding | 1.0.0 | 2026-08-09 |
-| stak-update-request | 1.0.0 | 2026-08-09 |
+| stak-update-request | 1.1.0 | 2026-08-26 |
 
 Skill versions move independently of the plugin version. The plugin version in
 `.claude-plugin/plugin.json` is the **only** update signal installed users

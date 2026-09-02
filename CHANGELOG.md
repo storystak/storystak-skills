@@ -1,5 +1,24 @@
 # Changelog
 
+## 0.3.0 — 2026-09-02
+
+**The rename finally ships to installed users.** On 2026-08-25 the Vault
+became the Stak: `vault-conventions`, `vault-onboarding` and
+`vault-update-request` were renamed `stak-conventions`, `stak-onboarding` and
+`stak-update-request`, and on 2026-08-26 `stak-update-request` went to 1.1.0
+with the propagation sweep. Neither release bumped `plugin.json` — it sat at
+0.1.2 through 0.2.0 and both of these — and the plugin version is the only
+update signal an installed copy receives, so every plugin installed from this
+repo kept serving the Vault-named skills for a week after the rename. Nothing
+in `skills/` changes in this release; it exists to carry the version number.
+The validator now fails when `plugin.json`, `VERSIONS.md` and the skills'
+own frontmatter disagree, so this cannot recur silently.
+
+`stak-update-request` 1.1.0 (2026-08-26) — after a request is approved, the
+skill sweeps the other surfaces that repeat the same fact and files the
+follow-up requests, so a correction lands once instead of leaving stale
+copies behind.
+
 ## 0.2.0 — 2026-08-16
 
 New skill: `team-onboarding` 1.0.0 — walks a new team member (hire or

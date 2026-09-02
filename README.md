@@ -17,8 +17,9 @@ Built by [Storystak](https://storystak.com). MIT licensed, free to use and fork.
 | **copy-check** | Pre-ship gate. Every number traced to a canonical source, voice matched to the brand guide, quotes verified. Returns findings and a PASS/FAIL — never rewritten copy. |
 | **stak-update-request** | Files a correction a reviewer can act on without a follow-up conversation. Covers the edit vs new-file decision. |
 | **stak-onboarding** | Non-technical first session with a Stak: what it holds, which tool answers which question, and the setup checklist. |
+| **team-onboarding** | Walks a new hire or contractor through the company's own onboarding, phase by phase, from the Stak's playbook and SOP library — never an invented one. |
 
-The first three work anywhere. The four Stak skills need a Stak connector attached — without one they say so and fall back to what they can do unaided.
+The first three work anywhere. The five Stak skills need a Stak connector attached — without one they say so and fall back to what they can do unaided.
 
 ---
 
