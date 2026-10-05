@@ -51,7 +51,7 @@ These work by externalizing the source of the problem — pointing at something 
 - **The frame:** "You can't sell it, can't return it, can't get out."
 - **Why it works:** Validates accumulated resentment from long-term obligation
 - **When to use:** Long-term contracts, perpetual obligations, industries with weak resale or exit markets
-- **Vertical fit:** Timeshare exit, debt relief, contract cancellation, long-tenure SaaS lock-in
+- **Vertical fit:** Debt relief, contract cancellation, membership exit, long-tenure SaaS lock-in
 
 #### Lever D: System Working Against You
 - **The frame:** "The fees you pay fund the lobby that fights against you."

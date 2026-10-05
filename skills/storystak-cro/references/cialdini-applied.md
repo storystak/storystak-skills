@@ -143,7 +143,7 @@ People look at what others are doing to decide what they should do. Social proof
 ## Principle 4: Authority
 
 ### The Core Idea
-People defer to credible experts. The challenge is that "authority" looks completely different by industry — what signals expertise to a CFO doesn't signal expertise to a 70-year-old timeshare owner.
+People defer to credible experts. The challenge is that "authority" looks completely different by industry — what signals expertise to a CFO doesn't signal expertise to a 70-year-old retiree.
 
 ### How It Plays by Industry
 
@@ -297,7 +297,7 @@ People are persuaded by shared identity. On landing pages, this manifests as in-
 - Founder is a member of the audience tribe (founder-led brands often beat corporate brands here)
 
 **Lead-Gen for Regulated Services**
-- "Built for [audience]" framing — "Help for timeshare owners who've tried everything else"
+- "Built for [audience]" framing — "Help for borrowers who've tried everything else"
 - Founder origin story creates unity (founder was in audience's shoes)
 
 **Info Products**

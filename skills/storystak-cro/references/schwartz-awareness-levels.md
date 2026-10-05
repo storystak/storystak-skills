@@ -119,7 +119,7 @@ The visitor is not ready for "Schedule a call" — they need a bridge offer firs
 The visitor knows solution categories exist. They're comparing approaches: "Should I hire an agency, do it in-house, or buy software?" They're not yet committed to one — and definitely not committed to your specific product.
 
 ### Where They Come From
-- Category search ("invoice automation software," "timeshare exit companies," "online MBA programs")
+- Category search ("invoice automation software," "debt relief companies," "online MBA programs")
 - Email nurture / retargeting after Problem-Aware engagement
 - Recommendations from someone who said "you should look into [category]"
 
@@ -138,7 +138,7 @@ The visitor knows solution categories exist. They're comparing approaches: "Shou
 ### Copy Examples
 
 **Hook (Solution Aware) — Lead-Gen Regulated Service:**
-> "Most timeshare exit companies are sales operations dressed up as legal services. Here's why this one is different."
+> "Most debt relief companies are sales operations dressed up as financial advice. Here's why this one is different."
 
 **Hook (Solution Aware) — B2B SaaS:**
 > "Built for finance teams at companies with 100–1,000 employees. Not a re-skinned enterprise tool."
