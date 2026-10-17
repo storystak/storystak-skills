@@ -21,7 +21,13 @@ them, but they will not receive fixes.
 | **stak-onboarding** | A non-technical first session with a Stak. |
 | **team-onboarding** | Walks a new hire through the company's own onboarding from the Stak. |
 
-If you installed one of these as a plugin or uploaded skill, you can
+## Still maintained here
+
+| Skill | What it does |
+|---|---|
+| **storystak-paper-art** | Makes images in the Storystak house style: isometric shapes as photographed paper and clay. Storystak's own look, so it does not ship inside client Staks. |
+
+If you installed one of the retired skills as a plugin or uploaded skill, you can
 remove it: with a Stak connected, the Stak serves the current version.
 
 Built by [Storystak](https://storystak.com).

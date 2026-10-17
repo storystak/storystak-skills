@@ -1,5 +1,21 @@
 # Changelog
 
+## 0.4.0 — 2026-10-17
+
+New skill: `storystak-paper-art` 1.0.0, the Storystak house image style.
+Isometric plates, cubes, strips and the logo-shaped Stak, rendered as
+photographed handmade paper and clay in the brand palette. It carries the
+fixed STYLE block, the subject vocabulary, the logo-reference step for the
+Stak, the model and route (GPT Image 2.5 through the ElevenLabs connector),
+and two bash + ImageMagick scripts: `finish.sh` (wide crop, colour-match to
+the page cream, WebP at 2x) and `fit.sh` (puts a cut-out part back exactly
+where it sits in the still, for exploded views). Separable parts are cut by a
+"keep ONLY" edit plus background removal, never by colour masks.
+
+This repo was retired on 2026-10-12. This skill is Storystak's own house
+style rather than a client-facing skill, so it does not ship inside client
+Staks; it is published here so any session can install it.
+
 ## 0.3.0 — 2026-09-02
 
 **The rename finally ships to installed users.** On 2026-08-25 the Vault
